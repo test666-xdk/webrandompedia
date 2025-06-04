@@ -4,262 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RandomPedia - Retro Game World</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Press Start 2P', monospace;
-            overflow-x: hidden;
-            min-height: 100vh;
-            background: linear-gradient(to bottom, #87CEEB 0%, #98D8E8 30%, #B0E0E6 60%, #90EE90 100%);
-            position: relative;
-        }
-        
-        /* Sky and clouds */
-        .sky {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 60%;
-            background: linear-gradient(to bottom, #4A90E2 0%, #87CEEB 100%);
-            z-index: -3;
-        }
-        
-        .cloud {
-            position: absolute;
-            background: white;
-            border-radius: 0;
-            image-rendering: pixelated;
-        }
-        
-        .cloud::before,
-        .cloud::after {
-            content: '';
-            position: absolute;
-            background: white;
-        }
-        
-        .cloud1 {
-            width: 60px;
-            height: 20px;
-            top: 15%;
-            left: 10%;
-            box-shadow: 
-                0 0 0 4px white,
-                20px -10px 0 0 white,
-                40px -5px 0 0 white,
-                -20px 0 0 0 white;
-        }
-        
-        .cloud2 {
-            width: 80px;
-            height: 25px;
-            top: 25%;
-            right: 15%;
-            box-shadow: 
-                0 0 0 4px white,
-                25px -12px 0 0 white,
-                50px -8px 0 0 white,
-                -25px 0 0 0 white;
-        }
-        
-        .cloud3 {
-            width: 50px;
-            height: 18px;
-            top: 35%;
-            left: 60%;
-            box-shadow: 
-                0 0 0 3px white,
-                15px -8px 0 0 white,
-                30px -4px 0 0 white,
-                -15px 0 0 0 white;
-        }
-        
-        /* Ground elements */
-        .ground {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 40%;
-            background: #8B4513;
-            z-index: -2;
-        }
-        
-        .grass-layer {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 30px;
-            background: #228B22;
-            background-image: 
-                repeating-linear-gradient(90deg, 
-                    #32CD32 0px, #32CD32 20px, 
-                    #228B22 20px, #228B22 40px);
-        }
-        
-        .blocks {
-            position: absolute;
-            bottom: 100px;
-            left: 0;
-            width: 100%;
-            height: 100px;
-            z-index: -1;
-        }
-        
-        .block {
-            position: absolute;
-            width: 40px;
-            height: 40px;
-            background: #8B4513;
-            border: 2px solid #654321;
-            image-rendering: pixelated;
-        }
-        
-        .grass-block {
-            background: #228B22;
-            border: 2px solid #006400;
-        }
-        
-        .stone-block {
-            background: #696969;
-            border: 2px solid #2F4F4F;
-        }
-        
-        /* Main content */
-        .container {
-            position: relative;
-            z-index: 10;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 20px;
-        }
-        
-        .title {
-            font-size: 3rem;
-            color: #FFD700;
-            text-shadow: 
-                4px 4px 0 #FF6B35,
-                8px 8px 0 #8B0000;
-            margin: 40px 0;
-            text-align: center;
-            image-rendering: pixelated;
-        }
-        
-        .main-button {
-            background: linear-gradient(45deg, #FFD700, #FFA500);
-            border: 6px solid #FF8C00;
-            color: #8B0000;
-            font-family: 'Press Start 2P', monospace;
-            font-size: 1.2rem;
-            padding: 20px 40px;
-            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path d="M8 4v4h4v4h4v4h4v4h4v4h-4v4h-4v-4h-4v-4h-4v-4h-4v-4z" fill="%23000"/></svg>'), pointer;
-            box-shadow: 
-                0 8px 0 #CC7000,
-                0 12px 20px rgba(0,0,0,0.3);
-            transition: all 0.1s ease;
-            margin: 60px 0;
-            image-rendering: pixelated;
-            position: relative;
-        }
-        
-        .main-button:hover {
-            transform: translateY(4px);
-            box-shadow: 
-                0 4px 0 #CC7000,
-                0 8px 15px rgba(0,0,0,0.3);
-        }
-        
-        .main-button:active {
-            transform: translateY(8px);
-            box-shadow: 
-                0 0 0 #CC7000,
-                0 4px 10px rgba(0,0,0,0.3);
-        }
-        
-        /* Member links section */
-        .member-section {
-            margin-top: auto;
-            width: 100%;
-            max-width: 1200px;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 40px;
-            padding: 40px 20px;
-            background: rgba(0, 0, 0, 0.7);
-            border: 4px solid #FFD700;
-            border-radius: 0;
-        }
-        
-        .member-column {
-            background: rgba(139, 69, 19, 0.8);
-            border: 3px solid #8B4513;
-            padding: 20px;
-        }
-        
-        .member-column h3 {
-            color: #FFD700;
-            font-size: 0.8rem;
-            margin-bottom: 20px;
-            text-align: center;
-            border-bottom: 2px solid #FFD700;
-            padding-bottom: 10px;
-        }
-        
-        .member-list {
-            list-style: none;
-        }
-        
-        .member-item {
-            display: flex;
-            align-items: center;
-            margin-bottom: 15px;
-            color: #FFFFFF;
-            font-size: 0.6rem;
-        }
-        
-        .avatar {
-            width: 24px;
-            height: 24px;
-            margin-right: 10px;
-            image-rendering: pixelated;
-            border: 1px solid #000;
-        }
-        
-        .avatar-1 { background: linear-gradient(45deg, #FF6B6B, #FF8E53); }
-        .avatar-2 { background: linear-gradient(45deg, #4ECDC4, #44A08D); }
-        .avatar-3 { background: linear-gradient(45deg, #A8E6CF, #7FCDCD); }
-        .avatar-4 { background: linear-gradient(45deg, #FFD93D, #FF6B6B); }
-        .avatar-5 { background: linear-gradient(45deg, #6C5CE7, #A29BFE); }
-        .avatar-6 { background: linear-gradient(45deg, #FD79A8, #FDCB6E); }
-        
-        /* Responsive design */
-        @media (max-width: 768px) {
-            .title {
-                font-size: 2rem;
-            }
-            
-            .main-button {
-                font-size: 1rem;
-                padding: 15px 30px;
-            }
-            
-            .member-section {
-                grid-template-columns: 1fr;
-                gap: 20px;
-            }
-        }
-    </style>
+   <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- Sky with clouds -->
@@ -301,20 +46,17 @@
                 <h3>Member Links</h3>
                 <ul class="member-list">
                     <li class="member-item">
-                        <div class="avatar avatar-1"></div>
-                        PixelMaster92
+                        <div class="avatar avatar-1">
+                            <img src="img/Forest-and-Trees-Free-Pixel-Backgrounds2.png" alt="gambar" class="profile">
+                        </div>
+                        Arwi
                     </li>
                     <li class="member-item">
                         <div class="avatar avatar-2"></div>
-                        RetroGamer
+                       Krisna
                     </li>
-                    <li class="member-item">
-                        <div class="avatar avatar-3"></div>
-                        BlockBuilder
-                    </li>
-                    <li class="member-item">
-                        <div class="avatar avatar-4"></div>
-                        CraftWizard
+                    
+                 
                     </li>
                 </ul>
             </div>
@@ -322,23 +64,16 @@
             <div class="member-column">
                 <h3>Member Links</h3>
                 <ul class="member-list">
-                    <li class="member-item">
-                        <div class="avatar avatar-5"></div>
-                        SkyExplorer
+                   <li class="member-item">
+                        <div class="avatar avatar-3"></div>
+                        Sela
                     </li>
                     <li class="member-item">
                         <div class="avatar avatar-6"></div>
-                        DigDeep88
+                     Vivi
                     </li>
-                    <li class="member-item">
-                        <div class="avatar avatar-1"></div>
-                        CloudJumper
-                    </li>
-                    <li class="member-item">
-                        <div class="avatar avatar-2"></div>
-                        StoneCarver
-                    </li>
-                </ul>
+                  
+                
             </div>
             
             <div class="member-column">
@@ -346,20 +81,13 @@
                 <ul class="member-list">
                     <li class="member-item">
                         <div class="avatar avatar-3"></div>
-                        GrassWalker
+                        Viani
                     </li>
                     <li class="member-item">
                         <div class="avatar avatar-4"></div>
-                        MineSeeker
+                        Asrida
                     </li>
-                    <li class="member-item">
-                        <div class="avatar avatar-5"></div>
-                        WorldBuilder
-                    </li>
-                    <li class="member-item">
-                        <div class="avatar avatar-6"></div>
-                        PixelHero
-                    </li>
+               
                 </ul>
             </div>
         </div>
