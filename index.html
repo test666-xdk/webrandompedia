@@ -13,6 +13,9 @@
         <div class="cloud cloud2"></div>
         <div class="cloud cloud3"></div>
     </div>
+
+    <!--Icon-->
+    <div class="bat"></div>
     
     <!-- Ground -->
     <div class="ground">
@@ -34,29 +37,37 @@
         <div class="block" style="left: 85%; bottom: 0;"></div>
         <div class="block grass-block" style="left: 95%; bottom: 0;"></div>
     </div>
+
+
+<!-- Script JavaScript -->
+
+
     
     <!-- Main content -->
     <div class="container">
         <h1 class="title">RandomPedia</h1>
-        <a href="baru.html">
-        <button class="main-button">Random Search</button>
-         </a>
+        
+            <button onclick="goToRandomPage()" class="main-button">Buka Halaman Random</button>
+         
         <div class="member-section">
             <div class="member-column">
                 <h3>Member Links</h3>
                 <ul class="member-list">
-                    <li class="member-item">
-                        <div class="avatar avatar-1">
-                            <img src="img/Forest-and-Trees-Free-Pixel-Backgrounds2.png" alt="gambar" class="profile">
-                        </div>
-                        Arwi
-                    </li>
-                    <li class="member-item">
-                        <div class="avatar avatar-2"></div>
-                       Krisna
-                    </li>
+                    <a href="arwi.html" style="text-decoration: none; color: none;">
+                        <li class="member-item">
+                            <div class="avatar avatar-1">
+                                <img src="img/Forest-and-Trees-Free-Pixel-Backgrounds2.png" alt="gambar" class="profile">
+                            </div>
+                            Arwi
+                        </li>
+                    </a>
                     
-                 
+                    <a href="krisna.html" style="text-decoration: none; color: inherit;">
+                        <li class="member-item">
+                            <div class="avatar avatar-2"></div>
+                           Krisna
+                        </li>
+                    </a>
                     </li>
                 </ul>
             </div>
@@ -64,33 +75,65 @@
             <div class="member-column">
                 <h3>Member Links</h3>
                 <ul class="member-list">
-                   <li class="member-item">
-                        <div class="avatar avatar-3"></div>
-                        Sela
-                    </li>
-                    <li class="member-item">
-                        <div class="avatar avatar-6"></div>
-                     Vivi
-                    </li>
+                    <a href="sela.html" style="text-decoration: none; color: none;">
+                        <li class="member-item">
+                            <div class="avatar avatar-3">
+                                <img src="img/Forest-and-Trees-Free-Pixel-Backgrounds2.png" alt="gambar" class="profile">
+                            </div>
+                            Sela
+                        </li>
+                    </a>
+                    <a href="vivi.html" style="text-decoration: none; color: none;">
+                        <li class="member-item">
+                            <div class="avatar avatar-6">
+                                <img src="img/Forest-and-Trees-Free-Pixel-Backgrounds2.png" alt="gambar" class="profile">
+                            </div>
+                            Vivi
+                        </li>
+                    </a>
                   
                 
             </div>
             
             <div class="member-column">
                 <h3>Member Links</h3>
-                <ul class="member-list">
+                <a href="viani.html" style="text-decoration: none; color: none;">
                     <li class="member-item">
-                        <div class="avatar avatar-3"></div>
+                        <div class="avatar avatar-7">
+                            <img src="img/Forest-and-Trees-Free-Pixel-Backgrounds2.png" alt="gambar" class="profile">
+                        </div>
                         Viani
                     </li>
+                </a>
+                <a href="asrida.html" style="text-decoration: none; color: none;">
                     <li class="member-item">
-                        <div class="avatar avatar-4"></div>
+                        <div class="avatar avatar-8">
+                            <img src="img/Forest-and-Trees-Free-Pixel-Backgrounds2.png" alt="gambar" class="profile">
+                        </div>
                         Asrida
                     </li>
+                </a>
                
                 </ul>
             </div>
         </div>
     </div>
+
+    <script>
+        function goToRandomPage() {
+            const pages = [
+                "krisna.html",
+                "sela.html",
+                "vivi.html",
+                "arwi.html",
+                "asrida.html",
+                "viani.html"
+            ];
+    
+            const randomIndex = Math.floor(Math.random() * pages.length);
+            const randomPage = pages[randomIndex];
+            window.location.href = randomPage;
+        }
+    </script>
 </body>
 </html>
