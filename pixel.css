@@ -6,6 +6,9 @@ body{
   font-style: normal;
     margin: 0 auto;
     background-color: azure;
+    background-image: url(img/one-piece-season-15-3840x2160-22064.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .navbar {
