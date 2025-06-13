@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+        
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+body {
+    
+        font-family: 'Press Start 2P', monospace;
+        overflow-x: hidden;
+        min-height: 100vh;
+        
+        /* Background gradient backup */
+        background: linear-gradient(to bottom, #87CEEB 0%, #98D8E8 30%, #B0E0E6 60%, #90EE90 100%);
+        
+        /* Gambar background */
+        background-image: url(img/10063141.jpg);
+        background-size: cover;            /* gambar memenuhi seluruh layar */
+        background-repeat: no-repeat;      /* gambar tidak diulang */
+        background-position: center center;/* posisi di tengah */
+        background-attachment: fixed;      /* efek paralaks ringan */
+        position: relative;
+    
+    
+}
+
+/* Sky and clouds */
+
+
+/* Main content */
+.container {
+    position: relative;
+    z-index: 10;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.title {
+    font-size: 3rem;
+    color: #FFD700;
+    text-shadow: 
+        4px 4px 0 #FF6B35,
+        8px 8px 0 #8B0000;
+    margin: 40px 0;
+    text-align: center;
+    image-rendering: pixelated;
+}
+
+
+
+
+
+
+
+
+
+.avatar {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    image-rendering: pixelated;
+    
+}
+
+.profile{
+  width: 30px;       /* Ukuran lebar */
+height: 30px;      /* Ukuran tinggi */
+border-radius: 50%; /* Membuat lingkaran */
+object-fit: cover;  /* Agar gambar tidak melebar atau memanjang */
+border: 2px solid #ccc; 
+
+}
+ .profile img {
+width: 50px;
+height: 50px;
+border-radius: 50%;
+object-fit: cover;
+margin-right: 10px;
+ }
+.avatar-2 { background: linear-gradient(45deg, #4ECDC4, #44A08D); }
+.avatar-3 { background: linear-gradient(45deg, #A8E6CF, #7FCDCD); }
+.avatar-4 { background: linear-gradient(45deg, #FFD93D, #FF6B6B); }
+.avatar-5 { background: linear-gradient(45deg, #6C5CE7, #A29BFE); }
+.avatar-6 { background: linear-gradient(45deg, #FD79A8, #FDCB6E); }
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .title {
+        font-size: 2rem;
+    }
+    
+    .main-button {
+        font-size: 1rem;
+        padding: 15px 30px;
+    }
+    
+    .member-section {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
