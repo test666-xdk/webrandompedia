@@ -1,18 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Press+Start+2P&display=swap');
 
-body{
-  font-family: "Press Start 2P", system-ui;
-  font-weight: 400;
-  font-style: normal;
-    margin: 0 auto;
-    background-color: azure;
-    background-image: url(img/one-piece-season-15-3840x2160-22064.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
+@media (max-width: 768px) {
+  .image {
+    background-position: top center;
+  }
 }
 
+body{
+  font-family: "Press Start 2P", system-ui;
+    margin: 0 auto;
+  background-color: #424242;
+  color: #e7e7e7;
+}
+.deskripsi{
+  font-family: "Pixelify Sans", system-ui;
+  font-size: 20px;
+  text-align: justify;
+  padding: 30px;
+}
 .navbar {
-  background-color: gray; /* Latar belakang transparan */
+  background-color: rgba(35, 35, 132, 0.373); /* Latar belakang transparan */
   display: flex;
   justify-content: space-between; /* Brand kiri, menu kanan */
   align-items: center;
@@ -30,10 +37,10 @@ body{
 
 .nav-right {
   font-weight: bold;
-  color: black;
+  color: rgb(0, 0, 0);
 }
 .navbar-brand {
-  color: black;
+  color: rgb(0, 0, 0);
   text-decoration: none;
   font-size: 25px;
 }
@@ -50,7 +57,7 @@ body{
 }
 
 .nav-link:hover {
-  color: #0f0; /* Hover efek */
+  color: rgb(255, 255, 255); /* Hover efek */
 }
 
 .nav-link.disabled {
@@ -88,3 +95,64 @@ body{
 .show {
   display: flex !important;
 }
+.container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+      padding: 40px;
+      background-color: #424242;
+    }
+
+    .card {
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      width: 300px;
+      text-align: left;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .card-content {
+      padding: 20px;
+    }
+
+    .card h3 {
+      margin-top: 0;
+      color: #333;
+    }
+
+    .card p {
+      color: #555;
+      font-size: 14px;
+    }
+
+    .card a {
+      display: inline-block;
+      margin-top: 12px;
+      text-decoration: none;
+      color: #f97316; /* Orange-500 */
+      font-weight: bold;
+    }
+
+    .card a:hover {
+      text-decoration: underline;
+    }
+    .image {
+     width: 100%; /* lebar 100% dari viewport */
+  height: 100vh; /* tinggi 100% dari viewport */
+  background-position: center; /* pusatkan gambar */
+  background-size: cover; /* pastikan gambar mengisi seluruh area */
+  background-repeat: no-repeat;
+    }
