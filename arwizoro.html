@@ -7,12 +7,77 @@
 </head>
 <body>
      <!-- navbar -->
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Press+Start+2P&display=swap');
+
+@media (max-width: 768px) {
+  .image {
+    background-position: top center;
+  }
+}
+
+body{
+  font-family: "Press Start 2P", system-ui;
+    margin: 0 auto;
+  background-color: #424242;
+  color: #e7e7e7;
+}
+.navbar {
+  background-color: rgba(35, 35, 132, 0.373); /* Latar belakang transparan */
+  display: flex;
+  justify-content: space-between; /* Brand kiri, menu kanan */
+  align-items: center;
+  padding: 16px 0px;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+.nav-left a {
+  margin-right: 20px;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.nav-right {
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+}
+.navbar-brand {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  font-size: 25px;
+}
+
+.navbar-nav {
+  display: flex;
+  gap: 25px;
+}
+
+.nav-link {
+  color: black;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.nav-link:hover {
+  color: rgb(255, 255, 255); /* Hover efek */
+}
+
+.nav-link.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+    </style>
+</head>
+<body>
+     <!-- navbar -->
     <nav class="navbar">
   <div class="navbar-brand">Arwinata</div>
   <div class="navbar-nav" id="navMenu">
     <a href="index.html" class="nav-link">Home</a>
     <a href="arwi.html" class="nav-link">One Piece menu</a>
   </div>
-</nav>
+  </nav>
 </body>
 </html>

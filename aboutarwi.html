@@ -3,12 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>luffy</title>
+    <title>about</title>
 </head>
 <body>
-     <!-- navbar -->
-    <nav class="navbar">
- <style>
+   <style>
       @import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Press+Start+2P&display=swap');
 
 @media (max-width: 768px) {
@@ -69,6 +67,37 @@ body{
   opacity: 0.5;
   pointer-events: none;
 }
+.content {
+      display: flex;
+      flex-direction: row; /* gambar di kiri */
+      gap: 40px;
+      padding: 50px 40px 40px 40px;
+    }
+
+    .content img {
+      width: 450px;
+      height: auto;
+        border-radius: 10px;
+      padding-top: 20px;
+    }
+
+    .text {
+      flex: 1;
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 768px) {
+      .content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .text {
+        max-width: 90%;
+      }
+    }
     </style>
 </head>
 <body>
@@ -78,7 +107,16 @@ body{
   <div class="navbar-nav" id="navMenu">
     <a href="index.html" class="nav-link">Home</a>
     <a href="arwi.html" class="nav-link">One Piece menu</a>
+    <a href="contactarwi.html" class="nav-link">Contact</a>
   </div>
   </nav>
+  <div class="content">
+    <img src="img/gambararwi/op.jpeg">
+    <div class="text">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero velit corporis veritatis non atque exercitationem nesciunt. Nemo tenetur autem eum ipsam obcaecati? Voluptatum, impedit? Vero facilis laborum amet perspiciatis porro!</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero velit corporis veritatis non atque exercitationem nesciunt. Nemo tenetur autem eum ipsam obcaecati? Voluptatum, impedit? Vero facilis laborum amet perspiciatis porro!</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero velit corporis veritatis non atque exercitationem nesciunt. Nemo tenetur autem eum ipsam obcaecati? Voluptatum, impedit? Vero facilis laborum amet perspiciatis porro!</p>
+    </div>
+  </div>
 </body>
 </html>
