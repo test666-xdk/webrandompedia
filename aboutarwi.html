@@ -25,7 +25,7 @@ body{
   background-color: rgba(35, 35, 132, 0.373); /* Latar belakang transparan */
   display: flex;
   justify-content: space-between; /* Brand kiri, menu kanan */
-  align-items: center;
+  align-items: center; /* agar berada di tengah */
   padding: 16px 0px;
   position: fixed;
   width: 100%;
@@ -34,16 +34,16 @@ body{
 .nav-left a {
   margin-right: 20px;
   text-decoration: none;
-  color: black;
+  color: rgb(255, 255, 255);
   font-weight: bold;
 }
 
 .nav-right {
   font-weight: bold;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
 }
 .navbar-brand {
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   text-decoration: none;
   font-size: 25px;
 }
@@ -54,13 +54,13 @@ body{
 }
 
 .nav-link {
-  color: black;
+  color: rgb(255, 255, 255);
   text-decoration: none;
   font-size: 15px;
 }
 
 .nav-link:hover {
-  color: rgb(255, 255, 255); /* Hover efek */
+  color: goldenrod; /* Hover efek */
 }
 
 .nav-link.disabled {
@@ -72,6 +72,7 @@ body{
       flex-direction: row; /* gambar di kiri */
       gap: 40px;
       padding: 50px 40px 40px 40px;
+      object-fit: cover;
     }
 
     .content img {
@@ -79,25 +80,40 @@ body{
       height: auto;
         border-radius: 10px;
       padding-top: 20px;
+      animation: slideDown 1s ease-out forwards;
     }
+    /* Animasi slide dari atas untuk gambar */
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
-    .text {
-      flex: 1;
-      font-size: 18px;
-      line-height: 1.6;
-    }
+/* Animasi slide dari kanan untuk teks */
+@keyframes slideRight {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 
-    @media (max-width: 768px) {
-      .content {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-      }
-
-      .text {
-        max-width: 90%;
-      }
-    }
+.text {
+  flex: 1;
+  font-size: 18px;
+  line-height: 1.6;
+  animation: slideRight 1s ease-out forwards;
+  animation-delay: 0.3s; /* Biar muncul sedikit setelah gambar */
+  opacity: 0; /* Pastikan animasi bekerja dari 0 ke 1 */
+}
     </style>
 </head>
 <body>
@@ -113,9 +129,14 @@ body{
   <div class="content">
     <img src="img/gambararwi/op.jpeg">
     <div class="text">
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero velit corporis veritatis non atque exercitationem nesciunt. Nemo tenetur autem eum ipsam obcaecati? Voluptatum, impedit? Vero facilis laborum amet perspiciatis porro!</p>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero velit corporis veritatis non atque exercitationem nesciunt. Nemo tenetur autem eum ipsam obcaecati? Voluptatum, impedit? Vero facilis laborum amet perspiciatis porro!</p>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero velit corporis veritatis non atque exercitationem nesciunt. Nemo tenetur autem eum ipsam obcaecati? Voluptatum, impedit? Vero facilis laborum amet perspiciatis porro!</p>
+      <h1>Ini dia alasan saya kenapa saya memilih tema One piece</h1><br>
+        <p>saya menyukai alur cerita One Piece dikarenakan cerita dari anime ini banyak menceritakan tentang pesan moral. Anime atau pun manga One Piece ini bukan hanya sekedar petualangan para bajak laut namun petualangan ini juga menceritakan tentang nilai-nilai persahabatan, tekad, impian, dan keberanian untuk melawan setiap rintangan yang kita hadapi untuk mencapai tujuan, dan setiap karakter di One Piece ini memiliki motivasi yang besar untuk berjuang, dan latar belakang yang berbeda pada setiap karakternya. </p>
+        <p>
+          Selain itu, dunia yang luas ada di One Piece dan penuh dengan imajinasi yang memberikan pengalaman yang berbeda dari cerita lainnya. Eiichiro Oda sebagai sang pencipta One Piece, dia berhasil membangun dimensi semesta yang kompleks namun sangat konsisten yang dapat membuat penonton dan pembaca menjadi penasaran dan terikat secara emosional.
+        </p>
+        <p>
+          Saya juga menyukai One Piece dimana ketika ketika mereka mulai membahas tentang isu-isu politik secara halus seperti keadilan,diskriminasi, dan kebebasan. Hal ini yang membuat saya merasa bahwa One Piece ini bukan hanya sekedar hiburan biasa, terapi mereka juga memberikan pelajaran tentang hidup yang bermakna.
+        </p>
     </div>
   </div>
 </body>
