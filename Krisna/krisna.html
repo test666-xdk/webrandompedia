@@ -1,96 +1,70 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pixel Vtuber Wiki - Krisna</title>
-  <link rel="stylesheet" href="krisna.css">
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="krisna.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <div class="pixel-wiki">
+  <div class="landing-container">
     <header>
       <h1>🕹️ Pixel Vtuber Wiki</h1>
       <nav>
         <a href="../index.html">Home</a>
-        <a href="#">Vtuber List</a>
-        <a href=" ">About</a>
+        <a href="#agencies">Agencies</a>
+        <a href="#about">About</a>
       </nav>
-    </header>
+    </header><main>
+  <section class="intro">
+    <h2>Apa itu Vtuber?</h2>
+    <p>VTuber, singkatan dari Virtual YouTuber, adalah pembuat konten online yang menggunakan avatar digital, biasanya karakter anime atau kartun, untuk berinteraksi dengan penonton mereka di platform seperti YouTube. Mereka menggunakan teknologi motion capture dan pelacakan wajah untuk menghidupkan avatar mereka, sehingga avatar tersebut dapat bergerak dan berekspresi layaknya manusia. </p>
+  </section>
 
-   <main>
-  <div class="card-container">
-
-    <div class="vtuber-card">
-      <div class="img-wrapper">
-        <img src="../img/gambarkrisna/kalea.jpeg" alt="Kalea Kovalskia">
+  <section id="agencies" class="agency-section">
+    <h2>Agensi VTuber Populer</h2>
+    <div class="card-container">
+      <div class="agency-card" onclick="showTalent('hololive')">
+        <h3>Hololive</h3>
+        <img src="../img/gambarkrisna/hololive-production-seeklogo.png" alt="Hololive Logo" class="agency-logo" />
+        <p>Agensi VTuber Jepang yang terkenal dengan berbagai generasi dan sub-cabang seperti Hololive English dan Hololive ID.</p>
       </div>
-      <div class="text-wrapper">
-        <h3>Kalea Kovalskia</h3>
-        <p>Kaela Kovalskia
-           (カエラ・コヴァルスキア)
-            is a female Indonesian Virtual YouTuber associated with hololive, debuting as part of its Indonesian (ID) branch third generation of VTubers alongside Vestia Zeta and Kobo Kanaeru.</p>
+
+      <div class="agency-card" onclick="showTalent('nijisanji')">
+        <h3>Nijisanji</h3>
+        <img src="../img/gambarkrisna/nijisanji-seeklogo.png" alt="Nijisanji Logo" class="agency-logo" />
+        <p>Salah satu agensi terbesar dengan banyak talent dari Jepang, Indonesia, dan dunia internasional.</p>
+      </div>
+
+      <div class="agency-card" onclick="showTalent('vshojo')">
+        <h3>VShojo</h3>
+        <img src="../img/gambarkrisna/vshojo-seeklogo.png" alt="VShojo Logo" class="agency-logo" />
+        <p>Agensi VTuber asal Amerika Serikat dengan pendekatan bebas dan berani dalam berkonten.</p>
+      </div>
+
+      <div class="agency-card" onclick="showTalent('indie')">
+        <h3>Indie</h3>
+        <img src="../img/gambarkrisna/indie-seeklogo.png" alt="Indie Logo" class="agency-logo" />
+        <p>VTuber independen yang tidak terikat agensi, namun tetap punya komunitas dan penggemar sendiri!</p>
       </div>
     </div>
 
-    <div class="vtuber-card">
-      <div class="img-wrapper">
-        <img src="../img/gambarkrisna/gigi.jpeg" alt="Gigi Murin">
-      </div>
-      <div class="text-wrapper">
-        <h3>Gigi Murin</h3>
-        <p>Gigi Murin is a female English-speaking Virtual YouTuber associated with hololive. She debuted in June 2024 as part of hololive English fourth generation -Justice-, alongside Elizabeth Rose Bloodflame, Cecilia Immergreen and Raora Panthera.</p>
-      </div>
+    <div class="talent-display" id="talent-display">
+      <!-- Talent akan ditampilkan di sini lewat JavaScript -->
     </div>
+  </section>
 
-    <div class="vtuber-card">
-      <div class="img-wrapper">
-        <img src="../img/gambarkrisna/kronii.jpeg" alt="Ouro Kronii">
-      </div>
-      <div class="text-wrapper">
-        <h3>Ouro Kronii</h3>
-        <p>TOuro Kronii (オーロ・クロニー) is a female English speaking Virtual YouTuber associated with hololive. She debuted in 2021 as part of hololive English -Council-, the second generation of members of hololive English, alongside Tsukumo Sana, Ceres Fauna, Nanashi Mumei and Hakos Baelz.</p>
-      </div>
-    </div>
-
-    <div class="vtuber-card">
-      <div class="img-wrapper">
-        <img src="../img/gambarkrisna/michi.jpg" alt="Michi Mochievee">
-      </div>
-      <div class="text-wrapper">
-        <h3>Michi Mochievee</h3>
-        <p>Michi Mochievee is a female English and Indonesian-speaking VTuber associated with VShojo. She debuted in April 2024 and is the sixteenth VTuber to debut with VShojo.</p>
-      </div>
-    </div>
-
-    <div class="vtuber-card">
-      <div class="img-wrapper">
-        <img src="../img/gambarkrisna/raora.webp" alt="Raora Panthera">
-      </div>
-      <div class="text-wrapper">
-        <h3>Raora Panthera</h3>
-        <p>Raora Panthera is a female English speaking Virtual YouTuber associated with hololive. She debuted in June 2024 as part of hololive English fourth generation -Justice-, alongside Elizabeth Rose Bloodflame, Gigi Murin and Cecilia Immergreen.</p>
-      </div>
-    </div>
-
-    <div class="vtuber-card">
-      <div class="img-wrapper">
-        <img src="../img/gambarkrisna/iofi.jpeg" alt="Ariani Iofifteen">
-      </div>
-      <div class="text-wrapper">
-        <h3>Ariani Iofifteen</h3>
-        <p>Airani Iofifteen (アイラニ・イオフィフティーン) is a female Indonesian Virtual YouTuber associated with hololive, debuting as part of its Indonesian (ID) branch first generation of VTubers alongside Moona Hoshinova and Ayunda Risu.</p>
-      </div>
-    </div>
-
-  </div>
+  <section id="about" class="about-section">
+    <h2>Tentang Website Ini</h2>
+    <p>Halaman ini dibuat oleh Krisna sebagai bagian dari proyek RandomPedia untuk memperkenalkan dunia VTuber dalam nuansa pixel retro!</p>
+  </section>
 </main>
 
+<footer>
+  <p>Made with ❤️ by Krisna</p>
+</footer>
 
-
-    <footer>
-      <p>Made with ❤️ by Krisna</p>
-    </footer>
-  </div>
+  </div>  
+  <script src="krisna.js"></script>
 </body>
 </html>
