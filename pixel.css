@@ -19,7 +19,7 @@ body{
   padding: 30px;
 }
 .navbar {
-  background-color: rgba(35, 35, 132, 0.373); /* Latar belakang transparan */
+  background-color: transparent; /* Latar belakang transparan */
   display: flex;
   justify-content: space-between; /* Brand kiri, menu kanan */
   align-items: center; /* agar berada di tengah */
@@ -41,9 +41,11 @@ body{
   color: rgb(255, 255, 255);
 }
 .navbar-brand {
-  color: rgb(255, 255, 255);
-  text-decoration: none;
+    text-decoration: none;
   font-size: 25px;
+  background: linear-gradient(to right, #ffffff, #ffbf00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .navbar-nav {

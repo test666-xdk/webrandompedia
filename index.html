@@ -1,130 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>RandomPedia - Retro Game World</title>
-    <link href="dist/rpgui.css" rel="stylesheet" type="text/css" >
-    
-   <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
-<body  >
-    <!-- Sky with clouds -->
-    
-    <div class="sky">
-        <div class="cloud cloud1"></div>
-        <div class="cloud cloud2"></div>
-        <div class="cloud cloud3"></div>
-    </div>
-
-    <!--Icon-->
-    <div class="bat"></div>
-    
-    <!-- Ground -->
-    <div class="ground">
-        <div class="grass-layer"></div>
-    </div>
-    
-    <!-- Decorative blocks -->
-    <div class="blocks">
-        <div class="block grass-block" style="left: 5%; bottom: 0;"></div>
-        <div class="block grass-block" style="left: 9%; bottom: 0;"></div>
-        <div class="block stone-block" style="left: 15%; bottom: 0;"></div>
-        <div class="block" style="left: 19%; bottom: 0;"></div>
-        <div class="block grass-block" style="left: 25%; bottom: 0;"></div>
-        <div class="block stone-block" style="left: 35%; bottom: 0;"></div>
-        <div class="block grass-block" style="left: 45%; bottom: 0;"></div>
-        <div class="block" style="left: 55%; bottom: 0;"></div>
-        <div class="block stone-block" style="left: 65%; bottom: 0;"></div>
-        <div class="block grass-block" style="left: 75%; bottom: 0;"></div>
-        <div class="block" style="left: 85%; bottom: 0;"></div>
-        <div class="block grass-block" style="left: 95%; bottom: 0;"></div>
-    </div>
-
-
-<!-- Script JavaScript -->
-
-
-    
-    <!-- Main content -->
+<body>
     <div class="container">
         <h1 class="title">RandomPedia</h1>
-        
-            <button onclick="goToRandomPage()" class="main-button">Buka Halaman Random</button>
-         
+        <button onclick="goToRandomPage()" class="main-button">Buka Halaman Random</button>
+
         <div class="member-section">
-            <div class="member-column">
-                <h3>Member Links</h3>
-                <ul class="member-list">
-                    <a href="arwi.html" style="text-decoration: none; color: none;">
-                        <li class="member-item">
-                            <div class="avatar avatar-1">
-                                <img src="img/Forest-and-Trees-Free-Pixel-Backgrounds2.png" alt="gambar" class="profile">
-                            </div>
-                            Arwi
-                        </li>
+            <h2 class="section-title">Member RandomPedia</h2>
+            <ul class="member-list">
+                <li class="member-item">
+                    <a href="filearwi/arwi.html">
+                        <img src="img/arwi.png" alt="Arwi" />
+                        <span>Arwi</span>
                     </a>
-                    
-                    <a href="Krisna/krisna.html" style="text-decoration: none; color: none;">
-                        <li class="member-item">
-                            <div class="avatar avatar-7">
-                                <img src="img/kaela.png" alt="gambar" class="profile">
-                            </div>
-                            Krisna
-                        </li>
+                </li>
+                <li class="member-item">
+                    <a href="Krisna/krisna.html">
+                        <img src="img/kaela.png" alt="Krisna" />
+                        <span>Krisna</span>
                     </a>
-                    </li>
-                </ul>
-            </div>
-            
-            <div class="member-column">
-                <h3>Member Links</h3>
-                <ul class="member-list">
-                    <a href="sela.html" style="text-decoration: none; color: none;">
-                        <li class="member-item">
-                            <div class="avatar avatar-7">
-                                <img src="img/Forest-and-Trees-Free-Pixel-Backgrounds2.png" alt="gambar" class="profile">
-                            </div>
-                            Sela
-                        </li>
+                </li>
+                <li class="member-item">
+                    <a href="sela.html">
+                        <img src="img/sela.png" alt="Sela" />
+                        <span>Sela</span>
                     </a>
-                    <a href="vivi.html" style="text-decoration: none; color: none;">
-                        <li class="member-item">
-                            <div class="avatar avatar-7">
-                                <img src="img/Forest-and-Trees-Free-Pixel-Backgrounds2.png" alt="gambar" class="profile">
-                            </div>
-                            vivi
-                        </li>
+                </li>
+                <li class="member-item">
+                    <a href="vivi.html">
+                        <img src="img/vivi.png" alt="Vivi" />
+                        <span>Vivi</span>
                     </a>
-                  
-                
-            </div>
-            
-            <div class="member-column">
-                <h3>Member Links</h3>
-                <a href="viani.html" style="text-decoration: none; color: none;">
-                    <li class="member-item">
-                        <div class="avatar avatar-7">
-                            <img src="img/Forest-and-Trees-Free-Pixel-Backgrounds2.png" alt="gambar" class="profile">
-                        </div>
-                        Viani
-                    </li>
-                </a>
-                <a href="asrida.html" style="text-decoration: none; color: none;">
-                    <li class="member-item">
-                        <div class="avatar avatar-8">
-                            <img src="img/Forest-and-Trees-Free-Pixel-Backgrounds2.png" alt="gambar" class="profile">
-                        </div>
-                        Asrida
-                    </li>
-                </a>
-               
-                </ul>
-            </div>
+                </li>
+                <li class="member-item">
+                    <a href="viani.html">
+                        <img src="img/viani.png" alt="Viani" />
+                        <span>Viani</span>
+                    </a>
+                </li>
+                <li class="member-item">
+                    <a href="asrida.html">
+                        <img src="img/asrida.png" alt="Asrida" />
+                        <span>Asrida</span>
+                    </a>
+                </li>
+            </ul>
         </div>
     </div>
-    
-    <script src="dist/rpgui.js"></script>
+
     <script>
         function goToRandomPage() {
             const pages = [
@@ -135,9 +65,7 @@
                 "asrida.html",
                 "viani.html"
             ];
-    
-            const randomIndex = Math.floor(Math.random() * pages.length);
-            const randomPage = pages[randomIndex];
+            const randomPage = pages[Math.floor(Math.random() * pages.length)];
             window.location.href = randomPage;
         }
     </script>
