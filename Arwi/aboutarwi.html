@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>about</title>
+</head>
+<body>
+   <style>
+      @import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Press+Start+2P&display=swap');
+
+@media (max-width: 768px) {
+  .image {
+    background-position: top center;
+  }
+}
+
+body{
+  font-family: "Press Start 2P", system-ui;
+    margin: 0 auto;
+  background-color: #424242;
+  color: #e7e7e7;
+}
+.navbar {
+  background-color: rgba(35, 35, 132, 0.373); /* Latar belakang transparan */
+  display: flex;
+  justify-content: space-between; /* Brand kiri, menu kanan */
+  align-items: center; /* agar berada di tengah */
+  padding: 16px 0px;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+   box-sizing: border-box; /* agar padding masuk ke dalam ukuran */
+}
+.nav-left a {
+  margin-right: 20px;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+}
+
+.nav-right {
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+}
+.navbar-brand {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-size: 25px;
+}
+
+.navbar-nav {
+  display: flex;
+  gap: 25px;
+}
+
+.nav-link {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.nav-link:hover {
+  color: goldenrod; /* Hover efek */
+}
+
+.nav-link.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+.content {
+      display: flex;
+      flex-direction: row; /* gambar di kiri */
+      gap: 40px;
+      padding: 50px 40px 40px 40px;
+      object-fit: cover;
+    }
+
+    .content img {
+      width: 450px;
+      height: auto;
+        border-radius: 10px;
+      padding-top: 20px;
+      animation: slideDown 1s ease-out forwards;
+    }
+    /* Animasi slide dari atas untuk gambar */
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animasi slide dari kanan untuk teks */
+@keyframes slideRight {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.text {
+  flex: 1;
+  font-size: 18px;
+  line-height: 1.6;
+  animation: slideRight 1s ease-out forwards;
+  animation-delay: 0.3s; /* Biar muncul sedikit setelah gambar */
+  opacity: 0; /* Pastikan animasi bekerja dari 0 ke 1 */
+}
+    </style>
+</head>
+<body>
+     <!-- navbar -->
+    <nav class="navbar">
+  <div class="navbar-brand">Arwinata</div>
+  <div class="navbar-nav" id="navMenu">
+    <a href="index.html" class="nav-link">Home</a>
+    <a href="arwi.html" class="nav-link">One Piece menu</a>
+    <a href="contactarwi.html" class="nav-link">Contact</a>
+  </div>
+  </nav>
+  <div class="content">
+    <img src="img/gambararwi/op.jpeg">
+    <div class="text">
+      <h1>Ini dia alasan saya kenapa saya memilih tema One piece</h1><br>
+        <p>saya menyukai alur cerita One Piece dikarenakan cerita dari anime ini banyak menceritakan tentang pesan moral. Anime atau pun manga One Piece ini bukan hanya sekedar petualangan para bajak laut namun petualangan ini juga menceritakan tentang nilai-nilai persahabatan, tekad, impian, dan keberanian untuk melawan setiap rintangan yang kita hadapi untuk mencapai tujuan, dan setiap karakter di One Piece ini memiliki motivasi yang besar untuk berjuang, dan latar belakang yang berbeda pada setiap karakternya. </p>
+        <p>
+          Selain itu, dunia yang luas ada di One Piece dan penuh dengan imajinasi yang memberikan pengalaman yang berbeda dari cerita lainnya. Eiichiro Oda sebagai sang pencipta One Piece, dia berhasil membangun dimensi semesta yang kompleks namun sangat konsisten yang dapat membuat penonton dan pembaca menjadi penasaran dan terikat secara emosional.
+        </p>
+        <p>
+          Saya semakin tertarik dengan One Piece ketika mereka mulai membahas tentang isu-isu politik secara halus seperti keadilan, diskriminasi, dan kebebasan. Hal ini yang membuat saya merasa bahwa One Piece ini bukan hanya sekedar hiburan biasa, tetapi mereka juga memberikan pelajaran tentang hidup yang bermakna.
+        </p>
+    </div>
+  </div>
+</body>
+</html>
