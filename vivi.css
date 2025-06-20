@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styling untuk body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Styling untuk navigation */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    background-color: #008cba;
+    padding: 10px 0;
+    margin-bottom: 20px;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px 15px;
+}
+
+nav ul li a:hover {
+    background-color: #575757;
+    border-radius: 5px;
+}
+
+/* Styling untuk header */
+header {
+    background-color: #008cba;
+    color:rgb(10, 10, 10);
+    text-align: center;
+    padding: 30px 0;
+}
+
+header h1, header p {
+    font-size: 40px;
+}
+
+/* Full Image Styling */
+.full-image {
+    position: relative;
+    width: 200%;
+    height: 200%; /* Membuat gambar memenuhi tinggi layar */
+    overflow: hidden;
+}
+.about-image {
+    width: 300%;
+    height: 300%;
+    object-fit: cover; /* Memastikan gambar mengisi area tanpa distorsi */
+    object-position: center; /* Menjaga gambar tetap terpusat */
+}
+
+/* Styling untuk About Section */
+.about {
+    padding: 60px 20px;
+    background-color: #008cba;
+}
+
+.about-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.about-content {
+    display: flex; /* Flexbox untuk tata letak gambar dan teks */
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px; /* Jarak antara gambar dan teks */
+    flex-wrap: wrap; /* Membuat elemen membungkus pada layar kecil */
+}
+
+.about-image {
+    width: 45%; /* Lebar gambar 45% */
+    border-radius: 10px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1); /* Memberikan bayangan lembut */
+}
+
+.about-text {
+    width: 50%; /* Lebar teks 50% */
+    padding: 20px;
+}
+
+.about-text h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.about-text p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+/* Styling untuk footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+/* Media Queries untuk responsivitas */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 30px; /* Ukuran font lebih kecil pada layar kecil */
+    }
+
+    nav ul {
+        flex-direction: column; /* Item navbar disusun vertikal pada layar kecil */
+    }
+
+    nav ul li {
+        margin-bottom: 10px; /* Memberikan jarak antar item navbar */
+    }
+
+    /* Menyesuaikan layout gambar dan teks pada layar kecil */
+    .about-content {
+        flex-direction: column; /* Gambar dan teks ditata secara vertikal pada layar kecil */
+        text-align: center;
+    }
+
+    .about-image {
+        width: 80%; /* Gambar lebih lebar pada layar kecil */
+        margin-bottom: 20px;
+    }
+
+    .about-text {
+        width: 80%; /* Teks lebih lebar pada layar kecil */
+    }
+}
